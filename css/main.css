@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sky {
+  position: relative;
+  height: 60vh;
+  background-color: royalblue;
+  -webkit-animation: sky 8s linear 1;
+          animation: sky 8s linear 1;
+}
+
+.sun {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 30px yellow;
+  border-radius: 50%;
+  background-color: goldenrod;
+  -webkit-animation: sun 8s linear;
+          animation: sun 8s linear;
+}
+
+.ground {
+  position: relative;
+  height: 40vh;
+  background-color: rgb(76, 51, 51);
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: limegreen;
+}
+
+.road {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  height: 120px;
+  background-color: gray;
+}
+
+.car {
+  position: absolute;
+  top: -15px;
+  left: -200px;
+  height: 70px;
+  width: 150px;
+  background-color: tomato;
+  border-radius: 15px;
+  -webkit-animation: car 8s linear 1;
+          animation: car 8s linear 1;
+}
+
+.car::before,
+.car::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 35px;
+  background-color: tomato;
+}
+
+.car::after {
+  right: -20px;
+  border-top-right-radius: 10px;
+}
+
+.car::before {
+  left: -20px;
+  border-top-left-radius: 10px;
+}
+
+.wheel {
+  position: absolute;
+  bottom: -15px;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(30, 26, 26);
+  border-radius: 50%;
+  border: 2px dashed #999;
+  -webkit-animation: wheel 2s linear infinite;
+          animation: wheel 2s linear infinite;
+}
+
+.front-wheel {
+  right: 8px;
+  z-index: 1;
+}
+
+.rear-wheel {
+  left: 8px;
+}
+
+.window {
+  position: absolute;
+  top: 5px;
+  width: 45px;
+  height: 30px;
+  background-color: rgb(43, 83, 202);
+}
+
+.front-window {
+  right: 0;
+  z-index: 1;
+  border-top-right-radius: 10px;
+}
+
+.rear-window {
+  left: 0;
+  border-top-left-radius: 10px;
+}
+
+@-webkit-keyframes sky {
+  0% {
+    background-color: black;
+  }
+  40% {
+    background-color: royalblue;
+  }
+  60% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes sky {
+  0% {
+    background-color: black;
+  }
+  40% {
+    background-color: royalblue;
+  }
+  60% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@-webkit-keyframes sun {
+  0% {
+    top: 1000px;
+  }
+  40% {
+    top: 100px;
+  }
+  60% {
+    top: 100px;
+  }
+  100% {
+    top: 1000px;
+  }
+}
+@keyframes sun {
+  0% {
+    top: 1000px;
+  }
+  40% {
+    top: 100px;
+  }
+  60% {
+    top: 100px;
+  }
+  100% {
+    top: 1000px;
+  }
+}
+@-webkit-keyframes car {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 1500px;
+  }
+}
+@keyframes car {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 1500px;
+  }
+}
+@-webkit-keyframes wheel {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wheel {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */
